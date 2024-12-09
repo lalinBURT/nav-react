@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import Blog from "../../assets/svg/blog";
 // import Tool from "../../assets/svg/tool";
 // import Computer from "../../assets/svg/computer";
 // import Blog from "../../assets/svg/blog";
@@ -84,6 +85,7 @@ const menuListSlice = createSlice({
             },
             {
               key: '3',
+              icon: <Blog />,
               label: '博客看点',
               children: [
                 {

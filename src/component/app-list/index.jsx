@@ -4,6 +4,7 @@ import { ListWrapper } from './style'
 import { Menu } from 'antd';
 import { changeSelectedKeyAction, changeLevelKeysAction, changeTopListAction } from '../../store/modules/menu-list';
 
+
 const AppList = memo(function AppList() {
 
     const { list, isCollapse, selectedKey } = useSelector((state) => ({
@@ -12,7 +13,7 @@ const AppList = memo(function AppList() {
         levelKeys: state.menuList.levelKeys,
         selectedKey: state.menuList.selectedKey
       }),shallowEqual)
-    
+      console.log(list);
       const dispatch = useDispatch()
       useEffect(() => {
         dispatch(changeLevelKeysAction())
